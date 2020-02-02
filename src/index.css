@@ -129,14 +129,14 @@ input[type=number]::-webkit-outer-spin-button {
   font-weight: 500;
   font-stretch: 200%;
   font-kerning: normal;
-  color: #525252;
+  color: #2f55a4;
   text-decoration:none;
 }
 
 #submit:hover, #reset:hover {
   background-color: white;
   border: none;
-  color: #2f55a4;
+  color: #ff5719;
 }
 
 #play {
@@ -161,6 +161,27 @@ input[type=number]::-webkit-outer-spin-button {
 
 .timer {
   align-items: center;
+}
+
+.description {
+  flex-direction: column;
+  margin-top: 15px;
+}
+
+.description > div {
+  display: flex;
+}
+
+.description > div > p {
+  font-size: 0.95em;
+  margin: 0px 0px 7px 5px;
+}
+
+.star {
+  margin-left: 3px;
+  width: 10px;
+  height: 15px;
+  background-image: url(icon/star.svg);
 }
 
 #board {
