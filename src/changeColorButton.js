@@ -26,4 +26,7 @@ button.forEach((buttons) => {
   buttons.onmouseleave = () => {
     changeToBlack();
   };
+  buttons.ontouchcancel = () => {
+    changeToBlack();
+  };
 });

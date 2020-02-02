@@ -147,6 +147,10 @@ button.forEach(function (buttons) {
   buttons.onmouseleave = function () {
     changeToBlack();
   };
+
+  buttons.ontouchcancel = function () {
+    changeToBlack();
+  };
 });
 },{}],"../node_modules/parcel/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
