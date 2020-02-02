@@ -1,23 +1,33 @@
 {
-  "name": "saper",
+  "name": "dislike-sweeper",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
     "start": "parcel src/index.html",
     "build": "parcel build src/index.html",
     "lint": "eslint src --ext .js",
     "lint-fix": "eslint src --ext .js --fix"
   },
-  "author": "Elżbieta Kowalska <kowalska.el@gmail.com>",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kowalskael/dislike-sweeper.git"
+  },
+  "author": "",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kowalskael/dislike-sweeper/issues"
+  },
+  "homepage": "https://github.com/kowalskael/dislike-sweeper#readme",
   "devDependencies": {
-    "@babel/core": "^7.7.7",
-    "@babel/plugin-proposal-class-properties": "^7.7.4",
-    "babel-eslint": "^10.0.3",
-    "eslint": "^6.8.0",
+    "@babel/core": "^7.8.4",
+    "@babel/plugin-proposal-class-properties": "^7.8.3",
+    "babel-eslint": "^8.2.6",
+    "babel-install": "2.1.0",
+    "eslint": "^6.1.0",
     "eslint-config-airbnb-base": "^14.0.0",
-    "eslint-plugin-import": "^2.19.1",
+    "eslint-plugin-import": "^2.20.1",
     "parcel": "^1.12.4"
   }
 }
