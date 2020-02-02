@@ -148,9 +148,8 @@ button.forEach(function (buttons) {
     changeToBlack();
   };
 
-  buttons.ontouchcancel = function () {
-    changeToBlack();
-  };
+  button.addEventListener("touchstart", changeToBlue(), false);
+  button.addEventListener("touchend", changeToBlack(), false);
 });
 },{}],"../node_modules/parcel/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
