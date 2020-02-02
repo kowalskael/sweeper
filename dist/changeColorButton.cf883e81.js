@@ -144,7 +144,7 @@ button.forEach(function (buttons) {
     changeToBlue();
   };
 
-  buttons.onmouseout = function () {
+  buttons.onmouseleave = function () {
     changeToBlack();
   };
 });

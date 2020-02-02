@@ -23,7 +23,7 @@ button.forEach((buttons) => {
   buttons.onmouseover = () => {
     changeToBlue();
   };
-  buttons.onmouseout = () => {
+  buttons.onmouseleave = () => {
     changeToBlack();
   };
 });
