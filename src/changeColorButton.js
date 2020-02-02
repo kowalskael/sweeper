@@ -26,6 +26,10 @@ button.forEach((buttons) => {
   buttons.onmouseleave = () => {
     changeToBlack();
   };
-  buttons.addEventListener("touchstart", changeToBlue(), false);
-  buttons.addEventListener("touchend", changeToBlue(), false);
+  buttons.ontouchstart = () => {
+    changeToBlue();
+  };
+  buttons.ontouchend = () => {
+    changeToBlue();
+  };
 });
