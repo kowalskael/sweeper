@@ -26,11 +26,6 @@ document.getElementById('submit').onclick = () => {
   boardDraw.update();
 };
 
-document.getElementsByClassName('button').onmouseover = () => {
-  document.querySelectorAll('.arrow-right').classList.remove('blue');
-  document.querySelectorAll('.arrow-right').classList.add('black');
-};
-
 document.getElementById('reset').onclick = () => {
   document.getElementById('start').style.display = 'flex'; // game menu hidden
   document.getElementById('play').style.display = 'none'; // show play area

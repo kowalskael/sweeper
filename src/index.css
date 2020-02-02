@@ -107,11 +107,11 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 .blue {
-  background-image: url(icon/arrow-small.svg);
+  background-image: url(icon/arrow-right.svg);
 }
 
 .black {
-  background-image: url(icon/arrow-small-black.svg);
+  background-image: url(icon/arrow-right-orange.svg);
 }
 
 .button {
@@ -129,8 +129,6 @@ input[type=number]::-webkit-outer-spin-button {
   cursor:pointer;
   font: 1em "Roboto", sans-serif, medium;
   font-weight: 500;
-  font-stretch: 200%;
-  font-kerning: normal;
   color: #2f55a4;
   text-decoration:none;
 }

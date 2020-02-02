@@ -117,79 +117,38 @@ parcelRequire = (function (modules, cache, entry, globalName) {
   }
 
   return newRequire;
-})({"../node_modules/parcel/src/builtins/bundle-url.js":[function(require,module,exports) {
-var bundleURL = null;
+})({"changeColorButton.js":[function(require,module,exports) {
+var button = document.querySelectorAll('.button');
+var arrowRight = document.querySelectorAll('.arrow-right');
 
-function getBundleURLCached() {
-  if (!bundleURL) {
-    bundleURL = getBundleURL();
-  }
-
-  return bundleURL;
+function changeToBlue() {
+  arrowRight.forEach(function (arrow) {
+    arrow.classList.remove('blue');
+    arrow.classList.add('black');
+    document.getElementById('reset').style.color = '#ff5719';
+    document.getElementById('submit').style.color = '#ff5719';
+  });
 }
 
-function getBundleURL() {
-  // Attempt to find the URL of the current script and use that as the base URL
-  try {
-    throw new Error();
-  } catch (err) {
-    var matches = ('' + err.stack).match(/(https?|file|ftp|chrome-extension|moz-extension):\/\/[^)\n]+/g);
-
-    if (matches) {
-      return getBaseURL(matches[0]);
-    }
-  }
-
-  return '/';
+function changeToBlack() {
+  arrowRight.forEach(function (arrow) {
+    arrow.classList.remove('black');
+    arrow.classList.add('blue');
+    document.getElementById('reset').style.color = '#2f55a4';
+    document.getElementById('submit').style.color = '#2f55a4';
+  });
 }
 
-function getBaseURL(url) {
-  return ('' + url).replace(/^((?:https?|file|ftp|chrome-extension|moz-extension):\/\/.+)\/[^/]+$/, '$1') + '/';
-}
-
-exports.getBundleURL = getBundleURLCached;
-exports.getBaseURL = getBaseURL;
-},{}],"../node_modules/parcel/src/builtins/css-loader.js":[function(require,module,exports) {
-var bundle = require('./bundle-url');
-
-function updateLink(link) {
-  var newLink = link.cloneNode();
-
-  newLink.onload = function () {
-    link.remove();
+button.forEach(function (buttons) {
+  buttons.onmouseover = function () {
+    changeToBlue();
   };
 
-  newLink.href = link.href.split('?')[0] + '?' + Date.now();
-  link.parentNode.insertBefore(newLink, link.nextSibling);
-}
-
-var cssTimeout = null;
-
-function reloadCSS() {
-  if (cssTimeout) {
-    return;
-  }
-
-  cssTimeout = setTimeout(function () {
-    var links = document.querySelectorAll('link[rel="stylesheet"]');
-
-    for (var i = 0; i < links.length; i++) {
-      if (bundle.getBaseURL(links[i].href) === bundle.getBundleURL()) {
-        updateLink(links[i]);
-      }
-    }
-
-    cssTimeout = null;
-  }, 50);
-}
-
-module.exports = reloadCSS;
-},{"./bundle-url":"../node_modules/parcel/src/builtins/bundle-url.js"}],"index.css":[function(require,module,exports) {
-var reloadCSS = require('_css_loader');
-
-module.hot.dispose(reloadCSS);
-module.hot.accept(reloadCSS);
-},{"./icon/arrow-right.svg":[["arrow-right.b642b46e.svg","icon/arrow-right.svg"],"icon/arrow-right.svg"],"./icon/arrow-right-orange.svg":[["arrow-right-orange.329953e3.svg","icon/arrow-right-orange.svg"],"icon/arrow-right-orange.svg"],"./icon/star.svg":[["star.81250ec5.svg","icon/star.svg"],"icon/star.svg"],"./icon/smile.svg":[["smile.ae473213.svg","icon/smile.svg"],"icon/smile.svg"],"./icon/dislike.svg":[["dislike.0df09314.svg","icon/dislike.svg"],"icon/dislike.svg"],"_css_loader":"../node_modules/parcel/src/builtins/css-loader.js"}],"../node_modules/parcel/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+  buttons.onmouseout = function () {
+    changeToBlack();
+  };
+});
+},{}],"../node_modules/parcel/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -393,5 +352,5 @@ function hmrAcceptRun(bundle, id) {
     return true;
   }
 }
-},{}]},{},["../node_modules/parcel/src/builtins/hmr-runtime.js"], null)
-//# sourceMappingURL=/src.9ad09f98.js.map
+},{}]},{},["../node_modules/parcel/src/builtins/hmr-runtime.js","changeColorButton.js"], null)
+//# sourceMappingURL=/changeColorButton.cf883e81.js.map

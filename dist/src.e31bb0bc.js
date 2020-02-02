@@ -646,11 +646,6 @@ document.getElementById('submit').onclick = function () {
   boardDraw.update();
 };
 
-document.getElementsByClassName('button').onmouseover = function () {
-  document.querySelectorAll('.arrow-right').classList.remove('blue');
-  document.querySelectorAll('.arrow-right').classList.add('black');
-};
-
 document.getElementById('reset').onclick = function () {
   document.getElementById('start').style.display = 'flex'; // game menu hidden
 
