@@ -15,7 +15,7 @@
     <div id="input">
       <div class="field">
         <label for="width">width</label>
-        <input type="number" id="width" name="width" min="8" max="32" value="8">
+        <input type="number" id="width" name="width" min="8" max="10" value="8">
         <div class="changeValue">
           <div class="arrow-up up-cols"><img alt="" src="/arrow.13184a65.svg"></div>
           <div class="arrow-down down-cols"><img alt="" src="/arrow.13184a65.svg"></div>
@@ -23,7 +23,7 @@
       </div>
       <div class="field">
         <label for="height">height</label>
-        <input type="number" id="height" placeholder="height" name="height" min="8" max="32" value="8">
+        <input type="number" id="height" placeholder="height" name="height" min="8" max="10" value="8">
         <div class="changeValue">
           <div class="arrow-up up-rows"><img alt="" src="/arrow.13184a65.svg"></div>
           <div class="arrow-down down-rows"><img alt="" src="/arrow.13184a65.svg"></div>
@@ -38,13 +38,23 @@
         </div>
       </div>
     </div>
-    <input type="submit" id="submit" value="OK">
+    <div class="button">
+      <div class="arrow-right"><img alt="" src="/arrow-small.00eb3573.svg"></div> <div class="arrow-right"><img alt="" src="/arrow-small.00eb3573.svg"></div> <div class="arrow-right"><img alt="" src="/arrow-small.00eb3573.svg"></div>
+      <input type="submit" id="submit" value="PLAY">
+      <div class="arrow-right"><img alt="" src="/arrow-small.00eb3573.svg"></div> <div class="arrow-right"><img alt="" src="/arrow-small.00eb3573.svg"></div> <div class="arrow-right"><img alt="" src="/arrow-small.00eb3573.svg"></div>
+    </div>
   </div>
 
   <div id="play">
-    <div id="timer"></div>
+    <div class="timer">
+      <div><img alt="" src="/time.bf2f54b3.svg"></div><div id="timer"></div>
+    </div>
     <div id="board"></div>
-    <input type="submit" id="reset" value="RESET">
+    <div class="button">
+      <div class="arrow-right"><img alt="" src="/arrow-small.00eb3573.svg"></div> <div class="arrow-right"><img alt="" src="/arrow-small.00eb3573.svg"></div> <div class="arrow-right"><img alt="" src="/arrow-small.00eb3573.svg"></div>
+      <input type="submit" id="reset" value="PLAY AGAIN">
+      <div class="arrow-right"><img alt="" src="/arrow-small.00eb3573.svg"></div> <div class="arrow-right"><img alt="" src="/arrow-small.00eb3573.svg"></div> <div class="arrow-right"><img alt="" src="/arrow-small.00eb3573.svg"></div>
+    </div>
   </div>
 </div>
 

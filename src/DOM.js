@@ -117,15 +117,15 @@ export default class DOM {
           this.timer.stop();
           field.element.classList.remove('play');
           field.element.classList.add('lose');
-          field.element.classList.remove('play');
           this.boardContainer.classList.add('lose');
-          document.getElementById('timer').style.color = '#13306b';
+          document.getElementById('timer').style.color = '#2f55a4';
         } else if (this.board.isWin()) {
           this.timer.stop();
+          field.element.classList.remove('play');
+          field.element.classList.add('win');
+          document.getElementById('timer').style.color = '#2f55a4';
+          this.boardContainer.classList.add('win');
           if (field.fill === 9) {
-            document.getElementById('timer').style.color = '#2f55a4';
-            document.getElementById('play').style.borderColor = '#2f55a4';
-            document.body.style.background = '#ffcd19';
             field.element.classList.remove('revealed');
             field.element.classList.remove('flagged');
             field.element.classList.add('win');

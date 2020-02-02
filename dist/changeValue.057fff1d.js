@@ -122,7 +122,7 @@ var rows = document.getElementById('height');
 var columns = document.getElementById('width');
 var numBombs = document.getElementById('bombNums');
 document.querySelector('.up-cols').addEventListener('click', function () {
-  if (columns.value < 32) {
+  if (columns.value < 10) {
     columns.value = parseFloat(columns.value) + 1;
   }
 });
@@ -132,7 +132,7 @@ document.querySelector('.down-cols').addEventListener('click', function () {
   }
 });
 document.querySelector('.up-rows').addEventListener('click', function () {
-  if (rows.value < 32) {
+  if (rows.value < 10) {
     rows.value = parseFloat(rows.value) + 1;
   }
 });
@@ -179,7 +179,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "33435" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "39671" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

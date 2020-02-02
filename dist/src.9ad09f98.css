@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Roboto:500&display=swap');
+
 body {
     background: #ffffff;
     display: flex;
@@ -5,7 +8,7 @@ body {
     justify-content: center;
     margin: 100px 0px 0px 0px;
     padding: 0px;
-    font: 1em "Open Sans", sans-serif;
+    font: 1em "Roboto", sans-serif;
     color: #ffffff;
 }
 
@@ -13,33 +16,32 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
 }
 
 #start {
   display: flex;
-  width: 240px;
-  height: 240px;
+  width: 260px;
+  height: 260px;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  justify-content: start;
 }
 
 #input {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 70%;
-  margin-bottom: 5px;
+  width: 100%;
+  margin-bottom: 2px;
 }
 
 .field {
   background: white;
   display: flex;
-  width: 85%;
+  width: 100%;
   justify-content: flex-start;
   align-items: center;
-  border-radius: 3px;
-  border: 2px solid #525252;
+  border: 2px solid #2f55a4;
   color: white;
   text-decoration:none;
   margin-bottom: 10px;
@@ -47,6 +49,7 @@ body {
 
 .field > input {
   display: flex;
+  font: 1em "Roboto", sans-serif;
   height: 40px;
   width: 35px;
 }
@@ -60,13 +63,13 @@ input[type=number]::-webkit-outer-spin-button {
 .field > input[value] {
   text-align: center;
   border: none;
-  border-left: 2px solid #525252;
+  font: 1em "Roboto", sans-serif;
 }
 
 .field > label {
   font-size: 15px;
   padding: 0px 18px 0px 18px;
-  width: 40px;
+  width: 155px;
   color: black;
 }
 
@@ -87,44 +90,58 @@ input[type=number]::-webkit-outer-spin-button {
   transform: rotate(90deg);
 }
 
+.arrow-right {
+  margin-left: 3px;
+}
+
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
 #submit, #reset {
   margin-top: 4px;
-  width: 75px;
-  height: 30px;
-  background-color: #8c8c8c;
-  border-radius: 3px;
-  border: 2px solid #525252;
+  background-color: transparent;
+  border: none;
   display:inline-block;
   cursor:pointer;
-  color: white;
+  font: 1em "Roboto", sans-serif, medium;
+  font-weight: 500;
+  font-stretch: 200%;
+  font-kerning: normal;
+  color: #525252;
   text-decoration:none;
 }
 
 #submit:hover, #reset:hover {
-  background-color: #ffbb00;
-  border: 2px solid #ffd445;
-  color: black;
+  background-color: white;
+  border: none;
+  color: #2f55a4;
 }
 
 #play {
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
   padding: 5px 50px 5px 50px;
 }
 
 #play > div {
   display: flex;
-  justify-content: center;
 }
 
 #timer, #reset {
-  margin: 20px 0px 20px 0px;
+  margin: 15px 0px 12px 0px;
 }
 
 #timer {
   color: black;
   font-size: 18px;
+  align-items: flex-start;
+  margin-left: 10px;
+}
+
+.timer {
+  align-items: center;
 }
 
 #board {
@@ -166,7 +183,7 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 .hidden {
-  background: #dedede;
+  background: #ffd445;
 }
 
 .revealed {
@@ -174,7 +191,7 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 .flagged {
-  background: red;
+  background: #ff5719;
 }
 
 .revealed:before {
@@ -226,11 +243,15 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 .revealed[data-value="9"]:before {
-  content: url('/smile.ac0a3662.png');
+  content: url('/smile.ae473213.svg');
 }
 
 .win {
   background: #ffd445;
+  border-style: solid;
+  border-color: #2f55a4;
+  border-width: 1px;
+  box-sizing: border-box;
 }
 
 .win[data-value="9"]:before {

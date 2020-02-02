@@ -3,7 +3,7 @@ const columns = document.getElementById('width');
 const numBombs = document.getElementById('bombNums');
 
 document.querySelector('.up-cols').addEventListener('click', () => {
-  if (columns.value < 32) {
+  if (columns.value < 10) {
     columns.value = parseFloat(columns.value) + 1;
   }
 });
@@ -15,7 +15,7 @@ document.querySelector('.down-cols').addEventListener('click', () => {
 });
 
 document.querySelector('.up-rows').addEventListener('click', () => {
-  if (rows.value < 32) {
+  if (rows.value < 10) {
     rows.value = parseFloat(rows.value) + 1;
   }
 });
