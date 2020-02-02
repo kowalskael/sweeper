@@ -148,8 +148,8 @@ button.forEach(function (buttons) {
     changeToBlack();
   };
 
-  button.addEventListener("touchstart", changeToBlue(), false);
-  button.addEventListener("touchend", changeToBlack(), false);
+  buttons.addEventListener("touchstart", changeToBlue(), false);
+  buttons.addEventListener("touchend", changeToBlue(), false);
 });
 },{}],"../node_modules/parcel/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
