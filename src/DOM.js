@@ -73,6 +73,7 @@ export default class DOM {
   }
 
   update() {
+    let flagTimer = false;
     for (let row = 0; row < this.board.board.length; row += 1) {
       for (let col = 0; col < this.board.board[row].length; col += 1) {
         const field = this.board.board[row][col];
@@ -121,6 +122,7 @@ export default class DOM {
           document.getElementById('timer').style.color = '#2f55a4';
         } else if (this.board.isWin()) {
           this.timer.stop();
+          flagTimer = true;
           field.element.classList.remove('play');
           field.element.classList.add('win');
           document.getElementById('timer').style.color = '#2f55a4';
@@ -132,6 +134,10 @@ export default class DOM {
           }
         }
       }
+    }
+    if (flagTimer) {
+      const timer = document.getElementById('timer');
+      timer.innerText = timer.innerText + ' WOW! ';
     }
   }
 }

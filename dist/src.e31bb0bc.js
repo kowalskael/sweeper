@@ -476,6 +476,8 @@ function () {
   _createClass(DOM, [{
     key: "update",
     value: function update() {
+      var flagTimer = false;
+
       for (var row = 0; row < this.board.board.length; row += 1) {
         for (var col = 0; col < this.board.board[row].length; col += 1) {
           var field = this.board.board[row][col];
@@ -521,6 +523,7 @@ function () {
             document.getElementById('timer').style.color = '#2f55a4';
           } else if (this.board.isWin()) {
             this.timer.stop();
+            flagTimer = true;
             field.element.classList.remove('play');
             field.element.classList.add('win');
             document.getElementById('timer').style.color = '#2f55a4';
@@ -533,6 +536,11 @@ function () {
             }
           }
         }
+      }
+
+      if (flagTimer) {
+        var timer = document.getElementById('timer');
+        timer.innerText = timer.innerText + ' WOW! ';
       }
     }
   }]);
@@ -636,6 +644,11 @@ document.getElementById('submit').onclick = function () {
   stopwatch.start();
   var boardDraw = new _DOM.default(boardTest, board, numBombs, stopwatch);
   boardDraw.update();
+};
+
+document.getElementsByClassName('button').onmouseover = function () {
+  document.querySelectorAll('.arrow-right').classList.remove('blue');
+  document.querySelectorAll('.arrow-right').classList.add('black');
 };
 
 document.getElementById('reset').onclick = function () {
