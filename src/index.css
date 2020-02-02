@@ -226,7 +226,7 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 .revealed[data-value="9"]:before {
-  content: url('icon/like.svg');
+  content: url('icon/smile.png');
 }
 
 .win {
@@ -234,7 +234,7 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 .win[data-value="9"]:before {
-  content: url('icon/like.svg');
+  content: url('icon/dislike.svg');
 }
 
 
