@@ -4,7 +4,7 @@ const arrowRight = document.querySelectorAll('.arrow-right');
 function changeToBlue() {
   arrowRight.forEach((arrow) => {
     arrow.classList.remove('blue');
-    arrow.classList.add('black');
+    arrow.classList.add('orange');
     document.getElementById('reset').style.color = '#ff5719';
     document.getElementById('submit').style.color = '#ff5719';
   });
@@ -12,7 +12,7 @@ function changeToBlue() {
 
 function changeToBlack() {
   arrowRight.forEach((arrow) => {
-    arrow.classList.remove('black');
+    arrow.classList.remove('orange');
     arrow.classList.add('blue');
     document.getElementById('reset').style.color = '#2f55a4';
     document.getElementById('submit').style.color = '#2f55a4';
@@ -25,11 +25,5 @@ button.forEach((buttons) => {
   };
   buttons.onmouseleave = () => {
     changeToBlack();
-  };
-  buttons.ontouchstart = () => {
-    changeToBlue();
-  };
-  buttons.ontouchend = () => {
-    changeToBlue();
   };
 });

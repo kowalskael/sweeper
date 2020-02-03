@@ -2,21 +2,43 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto:500&display=swap');
 
 body {
+  display: flex;
+  margin: 0px 0px 0px 0px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
     background: #ffffff;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    margin: 100px 0px 0px 0px;
     padding: 0px;
     font: 1em "Roboto", sans-serif;
     color: #2f55a4;
 }
 
 #container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+
+}
+
+#animation {
+  display: block;
+  position: fixed;
+  margin: 0px 0px 0px 0px;
+  width: 300px;
+  height: 100%;
+}
+
+#animation > svg {
+  margin-top: 0px;
+}
+
+@keyframes hideshow {
+  0% { opacity: 0; transform: translateY(700px);}
+  25% { opacity: 1; }
+  50% { opacity: 1; }
+  100% { opacity: 0; transform: translateY(-700px);}
+}
+
+.smile {
+  opacity: 0;
+  animation: hideshow 10s ease;
 }
 
 #start {
@@ -107,11 +129,15 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 .blue {
-  background-image: url(icon/arrow-right.svg);
+  color: #2f55a4;
 }
 
-.black {
-  background-image: url(icon/arrow-right-orange.svg);
+.orange {
+  color: #ff5719;
+}
+
+.arrow-right > svg {
+  fill: currentColor;
 }
 
 .button {
@@ -122,7 +148,6 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 #submit, #reset {
-  margin-top: 4px;
   background-color: transparent;
   border: none;
   display:inline-block;
@@ -149,7 +174,7 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 #timer, #reset {
-  margin: 15px 0px 12px 0px;
+  margin: 15px 0px 15px 0px;
 }
 
 #timer {
@@ -295,7 +320,7 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 .win[data-value="9"]:before {
-  content: url('icon/dislike.svg');
+  content: url('icon/like.svg');
 }
 
 

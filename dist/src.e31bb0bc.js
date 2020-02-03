@@ -521,6 +521,12 @@ function () {
             field.element.classList.add('lose');
             this.boardContainer.classList.add('lose');
             document.getElementById('timer').style.color = '#2f55a4';
+            setTimeout(function () {
+              document.getElementById('animation').style.display = 'block';
+            }, 0);
+            setTimeout(function () {
+              document.getElementById('animation').style.display = 'none';
+            }, 5000);
           } else if (this.board.isWin()) {
             this.timer.stop();
             flagTimer = true;
@@ -626,6 +632,7 @@ var _Timer = require("./Timer");
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 document.getElementById('play').style.display = 'none';
+document.getElementById('animation').style.display = 'none'; // show play area
 
 document.getElementById('submit').onclick = function () {
   document.getElementById('start').style.display = 'none'; // game menu hidden
@@ -656,6 +663,8 @@ document.getElementById('reset').onclick = function () {
   document.getElementById('width').value = '8';
   document.getElementById('bombNums').value = '10';
   document.getElementById('play').style.borderColor = 'grey';
+  document.getElementById('animation').style.display = 'none'; // show play area
+
   document.body.style.background = '#ffffff';
   var boardElements = document.getElementById('board');
 
@@ -691,7 +700,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "46599" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "44205" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

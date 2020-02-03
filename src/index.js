@@ -4,6 +4,7 @@ import { Timer } from './Timer';
 
 
 document.getElementById('play').style.display = 'none';
+document.getElementById('animation').style.display = 'none'; // show play area
 
 document.getElementById('submit').onclick = () => {
   document.getElementById('start').style.display = 'none'; // game menu hidden
@@ -34,6 +35,7 @@ document.getElementById('reset').onclick = () => {
   document.getElementById('width').value = '8';
   document.getElementById('bombNums').value = '10';
   document.getElementById('play').style.borderColor = 'grey';
+  document.getElementById('animation').style.display = 'none'; // show play area
   document.body.style.background = '#ffffff';
 
   const boardElements = document.getElementById('board');
