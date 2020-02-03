@@ -521,15 +521,15 @@ function () {
             field.element.classList.add('lose');
             this.boardContainer.classList.add('lose');
             document.getElementById('timer').style.color = '#2f55a4';
+          } else if (this.board.isWin()) {
+            this.timer.stop();
+            flagTimer = true;
             setTimeout(function () {
               document.getElementById('animation').style.display = 'block';
             }, 0);
             setTimeout(function () {
               document.getElementById('animation').style.display = 'none';
             }, 5000);
-          } else if (this.board.isWin()) {
-            this.timer.stop();
-            flagTimer = true;
             field.element.classList.remove('play');
             field.element.classList.add('win');
             document.getElementById('timer').style.color = '#2f55a4';
