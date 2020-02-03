@@ -634,6 +634,11 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 document.getElementById('play').style.display = 'none';
 document.getElementById('animation').style.display = 'none'; // show play area
 
+var smileys = document.querySelectorAll('.smile');
+smileys.forEach(function (smile) {
+  return smile.style.setProperty('--animation-time', Math.random() * 4 + 3 + 's');
+});
+
 document.getElementById('submit').onclick = function () {
   document.getElementById('start').style.display = 'none'; // game menu hidden
 

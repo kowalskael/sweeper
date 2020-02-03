@@ -6,6 +6,9 @@ import { Timer } from './Timer';
 document.getElementById('play').style.display = 'none';
 document.getElementById('animation').style.display = 'none'; // show play area
 
+const smileys = document.querySelectorAll('.smile');
+smileys.forEach((smile) => smile.style.setProperty('--animation-time', (Math.random() * 4) + 3 + 's'));
+
 document.getElementById('submit').onclick = () => {
   document.getElementById('start').style.display = 'none'; // game menu hidden
   document.getElementById('play').style.display = 'flex'; // show play area

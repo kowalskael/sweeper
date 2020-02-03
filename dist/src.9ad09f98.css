@@ -25,6 +25,7 @@ body {
   height: 100%;
 }
 
+
 #animation > svg {
   margin-top: 0px;
 }
@@ -36,9 +37,13 @@ body {
   100% { opacity: 0; transform: translateY(-700px);}
 }
 
+:root {
+  --animation-time: 1s;
+}
+
 .smile {
   opacity: 0;
-  animation: hideshow 10s ease;
+  animation: hideshow var(--animation-time) ease;
 }
 
 #start {
