@@ -200,10 +200,11 @@ input[type=number] {
   animation-name: wave;
   animation-iteration-count: infinite;
   animation-direction: alternate;
+  background-color: transparent;
 }
 
 #submit:hover, #reset:hover {
-  background-color: white;
+  background-color: transparent;
   border: none;
   color: #ff5719;
 }
