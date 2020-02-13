@@ -190,6 +190,18 @@ input[type=number] {
   padding-top: 3px;
 }
 
+@keyframes wave {
+  from { transform : translateY(1px); }
+  to   { transform : translateY( -1px ); }
+}
+
+.button > input {
+  animation-duration: 0.3s;
+  animation-name: wave;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
 #submit:hover, #reset:hover {
   background-color: white;
   border: none;
