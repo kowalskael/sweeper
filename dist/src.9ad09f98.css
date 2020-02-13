@@ -18,7 +18,7 @@ body {
 }
 
 #animation {
-  display: block;
+  display: none;
   position: fixed;
   margin: 0px 0px 0px 0px;
   width: 300px;
@@ -55,7 +55,17 @@ body {
   margin: 0px 50px 5px 50px;
 }
 
-#start > p {
+.icon-smile {
+  display: flex;
+  flex-direction: row;
+}
+
+.icon-smile > img {
+  width: 22px;
+  padding-right: 4px;
+}
+
+.icon-smile > p {
   font: 1.1em "Roboto", sans-serif;
   font-weight: 500;
   margin-bottom: 16px;
@@ -72,6 +82,7 @@ body {
 
 input {
   background-color: transparent;
+  padding: 0px;
 }
 
 .field {
@@ -330,7 +341,7 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 .win[data-value="9"]:before {
-  content: url('/like.c33cbec6.svg');
+  content: url('/smile.ae473213.svg');
 }
 
 

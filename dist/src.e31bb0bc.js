@@ -521,15 +521,15 @@ function () {
             field.element.classList.add('lose');
             this.boardContainer.classList.add('lose');
             document.getElementById('timer').style.color = '#2f55a4';
-          } else if (this.board.isWin()) {
-            this.timer.stop();
             flagTimer = true;
             setTimeout(function () {
               document.getElementById('animation').style.display = 'block';
             }, 0);
             setTimeout(function () {
               document.getElementById('animation').style.display = 'none';
-            }, 5000);
+            }, 3500);
+          } else if (this.board.isWin()) {
+            this.timer.stop();
             field.element.classList.remove('play');
             field.element.classList.add('win');
             document.getElementById('timer').style.color = '#2f55a4';
@@ -632,8 +632,6 @@ var _Timer = require("./Timer");
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 document.getElementById('play').style.display = 'none';
-document.getElementById('animation').style.display = 'none'; // show play area
-
 var smileys = document.querySelectorAll('.smile');
 smileys.forEach(function (smile) {
   return smile.style.setProperty('--animation-time', Math.random() * 4 + 3 + 's');
