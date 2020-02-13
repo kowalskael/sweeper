@@ -3,8 +3,6 @@ import DOM from './DOM';
 import { Timer } from './Timer';
 
 
-document.getElementById('play').style.display = 'none';
-
 const smileys = document.querySelectorAll('.smile');
 smileys.forEach((smile) => smile.style.setProperty('--animation-time', (Math.random() * 4) + 3 + 's'));
 

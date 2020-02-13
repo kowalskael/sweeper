@@ -631,7 +631,6 @@ var _Timer = require("./Timer");
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-document.getElementById('play').style.display = 'none';
 var smileys = document.querySelectorAll('.smile');
 smileys.forEach(function (smile) {
   return smile.style.setProperty('--animation-time', Math.random() * 4 + 3 + 's');
