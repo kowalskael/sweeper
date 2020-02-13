@@ -30,18 +30,20 @@ body {
   margin-top: 0px;
 }
 
+:root {
+  --animation-time: 0.1s;
+  --rotation: 90deg;
+}
+
 @keyframes hideshow {
   0% { opacity: 0; transform: translate(2px, 700px);}
   50% { opacity: 1; }
   100% { opacity: 0; transform: translate(-2px, -700px); }
 }
 
-:root {
-  --animation-time: 0.1s;
-}
-
 .smile {
   opacity: 0;
+  transform: rotate(90deg);
   animation: hideshow var(--animation-time) ease;
 }
 
@@ -175,8 +177,8 @@ input[type=number] {
 
 .button-submit {
   display: flex;
-  flex-direction: column;
-  align-items: flex-end;
+  flex-direction: row;
+  align-items: center;
   justify-content: flex-end;
   margin-top: 3px;
 }
@@ -196,7 +198,7 @@ input[type=number] {
   margin-right: -4px;
   animation-duration: 0.3s;
   animation-delay: -0.7s;
-  animation-name: wave;
+  animation-name: waveY;
   animation-iteration-count: infinite;
   animation-direction: alternate;
   animation-timing-function: ease-in-out;
@@ -215,7 +217,7 @@ input[type=number] {
 
 button {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
   justify-content: flex-end;
   margin-top: 3px;
@@ -226,7 +228,6 @@ button {
   font-weight: 500;
   color: #2f55a4;
   text-decoration:none;
-  padding-top: 3px;
 }
 
 #reset {

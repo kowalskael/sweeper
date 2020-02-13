@@ -7,6 +7,7 @@ const stopwatch = new Timer(timer);
 
 const smileys = document.querySelectorAll('.smile');
 smileys.forEach((smile) => smile.style.setProperty('--animation-time', `${(Math.random() * 2) + 2}s`));
+smileys.forEach((smile) => smile.style.setProperty('--rotation', `${(Math.random() * 90)}deg`));
 
 document.getElementById('submit').onclick = () => {
   document.getElementById('start').style.display = 'none'; // game menu hidden

@@ -119,12 +119,12 @@ export default class DOM {
           field.element.classList.remove('play');
           field.element.classList.add('lose');
           this.boardContainer.classList.add('lose');
+          setTimeout(() => { document.getElementById('animation').style.display = 'block'; }, 0);
+          setTimeout(() => { document.getElementById('animation').style.display = 'none'; }, 3500);
           document.getElementById('timer').style.color = '#2f55a4';
         } else if (this.board.isWin()) {
           this.timer.stop();
           flagTimer = true;
-          setTimeout(() => { document.getElementById('animation').style.display = 'block'; }, 0);
-          setTimeout(() => { document.getElementById('animation').style.display = 'none'; }, 3500);
           field.element.classList.remove('play');
           field.element.classList.add('win');
           document.getElementById('timer').style.color = '#2f55a4';
