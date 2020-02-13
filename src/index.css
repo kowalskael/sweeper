@@ -124,8 +124,8 @@ input[type=number] {
 }
 
 .field > label {
-  padding: 0px 18px 0px 18px;
-  width: 155px;
+  padding: 0px 20px 0px 20px;
+  width: 150px;
   font: 1em "Roboto", sans-serif;
   color: #2f55a4;
 }
@@ -369,6 +369,18 @@ input[type=number] {
 
   #play {
     margin: 100px 50px 5px 50px;
+  }
+
+  .arrow-up {
+    margin-bottom: 8px;
+  }
+
+  .arrow-down {
+    marign-top: 8px;
+  }
+
+  #submit:hover, #reset:hover {
+    color: #2f55a4;
   }
 }
 
