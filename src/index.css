@@ -67,6 +67,7 @@ body {
   align-items: center;
   width: 100%;
   margin-bottom: 2px;
+  background: none;
 }
 
 .field {
