@@ -229,30 +229,29 @@ button > div {
 }
 
 button > div:nth-child(1) {
-  animation-delay: 0s;
 }
 button > div:nth-child(2) {
-  animation-delay: 0.1s;
+  animation-delay: -0.1s;
 }
 
 button > div:nth-child(3) {
-  animation-delay: 0.2s;
+  animation-delay: -0.2s;
 }
 
 button > div:nth-child(4) {
-  animation-delay: 0.3s;
+  animation-delay: -0.3s;
 }
 
 button > div:nth-child(5) {
-  animation-delay: 0.4s;
+  animation-delay: -0.4s;
 }
 
 button > div:nth-child(6) {
-  animation-delay: 0.5s;
+  animation-delay: -0.5s;
 }
 
 button > div:nth-child(7) {
-  animation-delay: 0.6s;
+  animation-delay: -0.6s;
 }
 
 
@@ -422,7 +421,7 @@ button > div:nth-child(7) {
   }
 
   #start {
-    margin: 100px 50px 5px 50px;
+    margin: 50px 50px 5px 50px;
   }
 
   #play {
