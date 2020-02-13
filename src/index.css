@@ -399,7 +399,7 @@ button > div:nth-child(7) {
   content: url('icon/smile.svg');
 }
 
-@media (max-device-width: 680px) {
+@media (max-device-width: 720px) {
   .field {
     height: 64px;
   }
