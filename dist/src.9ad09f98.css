@@ -67,7 +67,11 @@ body {
   align-items: center;
   width: 100%;
   margin-bottom: 2px;
-  background: none;
+  background-color: transparent;
+}
+
+input {
+  background-color: transparent;
 }
 
 .field {
