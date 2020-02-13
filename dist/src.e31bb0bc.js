@@ -637,9 +637,6 @@ var smileys = document.querySelectorAll('.smile');
 smileys.forEach(function (smile) {
   return smile.style.setProperty('--animation-time', "".concat(Math.random() * 2 + 2, "s"));
 });
-smileys.forEach(function (smile) {
-  return smile.style.setProperty('--rotation', "".concat(Math.random() * 90, "deg"));
-});
 
 document.getElementById('submit').onclick = function () {
   document.getElementById('start').style.display = 'none'; // game menu hidden
