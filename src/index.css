@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto:500&display=swap');
 
 body, .field > input, .field > input[value],
-.icon-smile > p, .field > label {
+.icon-smile > p {
   display: flex;
   margin: 0px 0px 0px 0px;
   flex-direction: column;
@@ -116,6 +116,8 @@ input[type=number] {
 .field > label {
   padding: 0px 20px 0px 20px;
   width: 150px;
+  font: 1em "Roboto", sans-serif;
+  color: #2f55a4;
 }
 
 .changeValue {
