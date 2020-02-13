@@ -183,7 +183,7 @@ input[type=number] {
   border: none;
   display:inline-block;
   cursor:pointer;
-  font: 1em "Roboto", sans-serif, medium;
+  font: 1.1em "Roboto", sans-serif, medium;
   font-weight: 500;
   color: #2f55a4;
   text-decoration:none;
