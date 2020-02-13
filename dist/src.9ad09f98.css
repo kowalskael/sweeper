@@ -371,6 +371,10 @@ input[type=number] {
     margin: 0px 50px 5px 50px;
   }
 
+  #input {
+    height: 243px;
+  }
+
   .arrow-up {
     margin-bottom: 8px;
   }
