@@ -6,7 +6,7 @@ body {
   margin: 0px 0px 0px 0px;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
     background: #ffffff;
     padding: 0px;
     font: 1em "Roboto", sans-serif;
@@ -52,7 +52,7 @@ body {
   height: 260px;
   flex-direction: column;
   justify-content: start;
-  margin: 0px 50px 5px 50px;
+  margin: 200px 50px 5px 50px;
 }
 
 .icon-smile {
@@ -63,7 +63,7 @@ body {
 .icon-smile > img {
   width: 33px;
   padding-right: 4px;
-  
+  margin-left: -4px;
 }
 
 .icon-smile > p {
@@ -95,7 +95,7 @@ input {
   color: white;
   text-decoration:none;
   margin-bottom: 13px;
-  height: 64px;
+  height: 54px;
 }
 
 .field > input {
@@ -200,7 +200,7 @@ input[type=number] {
 #play {
   display: none;
   flex-direction: column;
-  margin: 0px 50px 5px 50px;
+  margin: 200px 50px 5px 50px;
 }
 
 #play > div {
