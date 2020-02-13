@@ -73,6 +73,7 @@ body, .field > input, .field > input[value],
   align-items: center;
   width: 100%;
   margin-bottom: 2px;
+  background-color: transparent;
 }
 
 input {
@@ -96,6 +97,7 @@ input {
   display: flex;
   height: 50px;
   width: 35px;
+  background-color: transparent;
 }
 
 input[type=number]::-webkit-inner-spin-button,
@@ -111,6 +113,7 @@ input[type=number] {
 .field > input[value] {
   text-align: center;
   border: none;
+  background-color: transparent;
 }
 
 .field > label {
