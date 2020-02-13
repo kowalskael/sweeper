@@ -63,7 +63,7 @@ body {
 .icon-smile > img {
   width: 33px;
   padding-right: 4px;
-  margin-left: -4px;
+  
 }
 
 .icon-smile > p {
@@ -95,7 +95,7 @@ input {
   color: white;
   text-decoration:none;
   margin-bottom: 13px;
-  height: 54px;
+  height: 64px;
 }
 
 .field > input {
