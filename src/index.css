@@ -168,20 +168,33 @@ input[type=number] {
 
 .button {
   display: flex;
+  flex-direction: row;
   align-items: center;
   justify-content: flex-end;
   margin-top: 3px;
 }
 
-.button > img {
+.button-submit {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: flex-end;
+  margin-top: 3px;
+}
+
+.button > img, .button-submit > img {
   width: 33px;
   margin-right: -4px;
 }
 
-#submit, #reset {
+button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  margin-top: 3px;
   background-color: transparent;
   border: none;
-  display:inline-block;
   cursor:pointer;
   font: 1.1em "Roboto", sans-serif, medium;
   font-weight: 500;
@@ -190,31 +203,64 @@ input[type=number] {
   padding-top: 3px;
 }
 
-@keyframes wave {
-  from { transform : translateY(1px); }
-  to   { transform : translateY( -1px ); }
+#reset {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
 }
 
-.button > input {
+button:hover {
+  border: none;
+  color: #ff5719;
+}
+
+@keyframes wave {
+  from { transform : translateX(2px); }
+  to   { transform : translateX(-2px ); }
+}
+
+button > div {
   animation-duration: 0.3s;
   animation-name: wave;
   animation-iteration-count: infinite;
   animation-direction: alternate;
-  background-color: transparent;
+  animation-timing-function: ease-in-out;
 }
 
-#submit:hover, #reset:hover {
-  background-color: transparent;
-  border: none;
-  color: #ff5719;
+button > div:nth-child(1) {
+  animation-delay: 0s;
 }
+button > div:nth-child(2) {
+  animation-delay: 0.1s;
+}
+
+button > div:nth-child(3) {
+  animation-delay: 0.2s;
+}
+
+button > div:nth-child(4) {
+  animation-delay: 0.3s;
+}
+
+button > div:nth-child(5) {
+  animation-delay: 0.4s;
+}
+
+button > div:nth-child(6) {
+  animation-delay: 0.5s;
+}
+
+button > div:nth-child(7) {
+  animation-delay: 0.6s;
+}
+
 
 #play {
   display: none;
   flex-direction: column;
   margin: 200px 50px 5px 50px;
 }
-
 
 #play > div {
   display: flex;
@@ -380,7 +426,7 @@ input[type=number] {
   }
 
   #play {
-    margin: 50px 50px 5px 50px;
+    margin: 30px 50px 5px 50px;
   }
 
   .arrow-up {
