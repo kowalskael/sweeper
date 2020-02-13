@@ -4,7 +4,7 @@ import { Timer } from './Timer';
 
 
 const smileys = document.querySelectorAll('.smile');
-smileys.forEach((smile) => smile.style.setProperty('--animation-time', (Math.random() * 4) + 3 + 's'));
+smileys.forEach((smile) => smile.style.setProperty('--animation-time', `${(Math.random() * 4) + 3}s`));
 
 document.getElementById('submit').onclick = () => {
   document.getElementById('start').style.display = 'none'; // game menu hidden
@@ -28,6 +28,9 @@ document.getElementById('submit').onclick = () => {
 };
 
 document.getElementById('reset').onclick = () => {
+  document.getElementById('width').style.color = '#2f55a4';
+  document.getElementById('height').style.color = '#2f55a4';
+  document.getElementById('bombNums').style.color = '#2f55a4';
   document.getElementById('start').style.display = 'flex'; // game menu hidden
   document.getElementById('play').style.display = 'none'; // show play area
   document.getElementById('timer').style.color = 'black';

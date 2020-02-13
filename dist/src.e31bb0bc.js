@@ -633,7 +633,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 var smileys = document.querySelectorAll('.smile');
 smileys.forEach(function (smile) {
-  return smile.style.setProperty('--animation-time', Math.random() * 4 + 3 + 's');
+  return smile.style.setProperty('--animation-time', "".concat(Math.random() * 4 + 3, "s"));
 });
 
 document.getElementById('submit').onclick = function () {
@@ -656,6 +656,9 @@ document.getElementById('submit').onclick = function () {
 };
 
 document.getElementById('reset').onclick = function () {
+  document.getElementById('width').style.color = '#2f55a4';
+  document.getElementById('height').style.color = '#2f55a4';
+  document.getElementById('bombNums').style.color = '#2f55a4';
   document.getElementById('start').style.display = 'flex'; // game menu hidden
 
   document.getElementById('play').style.display = 'none'; // show play area
