@@ -4,7 +4,7 @@ import { Timer } from './Timer';
 
 
 const smileys = document.querySelectorAll('.smile');
-smileys.forEach((smile) => smile.style.setProperty('--animation-time', `${(Math.random() * 4) + 3}s`));
+smileys.forEach((smile) => smile.style.setProperty('--animation-time', `${(Math.random() * 2) + 2}s`));
 
 document.getElementById('submit').onclick = () => {
   document.getElementById('start').style.display = 'none'; // game menu hidden

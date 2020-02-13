@@ -31,14 +31,13 @@ body {
 }
 
 @keyframes hideshow {
-  0% { opacity: 0; transform: translateY(700px);}
-  25% { opacity: 1; }
+  0% { opacity: 0; transform: translate(2px, 700px);}
   50% { opacity: 1; }
-  100% { opacity: 0; transform: translateY(-700px);}
+  100% { opacity: 0; transform: translate(-2px, -700px); }
 }
 
 :root {
-  --animation-time: 1s;
+  --animation-time: 0.1s;
 }
 
 .smile {
@@ -140,12 +139,12 @@ input[type=number] {
 
 .arrow-up {
   transform: rotate(-90deg);
-  margin-bottom: 4px;
+  margin-bottom: 3px;
 }
 
 .arrow-down {
   transform: rotate(90deg);
-  marign-top: 4px;
+  margin-top: 3px;
 }
 
 .arrow-right {
@@ -182,9 +181,36 @@ input[type=number] {
   margin-top: 3px;
 }
 
-.button > img, .button-submit > img {
+@keyframes wave {
+  from { transform : translateX(2px); }
+  to   { transform : translateX(-2px ); }
+}
+
+@keyframes waveY {
+  from { transform : translateY(2px); }
+  to   { transform : translateY(-2px ); }
+}
+
+.button-submit > img {
   width: 33px;
   margin-right: -4px;
+  animation-duration: 0.3s;
+  animation-delay: -0.7s;
+  animation-name: wave;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: ease-in-out;
+}
+
+.button > img {
+  width: 33px;
+  margin-right: -4px;
+  animation-duration: 0.3s;
+  animation-delay: -0.7s;
+  animation-name: waveY;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: ease-in-out;
 }
 
 button {
@@ -215,10 +241,7 @@ button:hover {
   color: #ff5719;
 }
 
-@keyframes wave {
-  from { transform : translateX(2px); }
-  to   { transform : translateX(-2px ); }
-}
+
 
 button > div {
   animation-duration: 0.3s;

@@ -633,7 +633,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 var smileys = document.querySelectorAll('.smile');
 smileys.forEach(function (smile) {
-  return smile.style.setProperty('--animation-time', "".concat(Math.random() * 4 + 3, "s"));
+  return smile.style.setProperty('--animation-time', "".concat(Math.random() * 2 + 2, "s"));
 });
 
 document.getElementById('submit').onclick = function () {
