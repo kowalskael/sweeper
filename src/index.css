@@ -413,11 +413,11 @@ button > div:nth-child(7) {
   }
 
   .arrow-up {
-    margin-bottom: 8px;
+    margin-bottom: 5px;
   }
 
   .arrow-down {
-    marign-top: 8px;
+    marign-top: 5px;
   }
 
   #submit:hover, #reset:hover {
