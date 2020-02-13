@@ -203,6 +203,7 @@ input[type=number] {
   margin: 200px 50px 5px 50px;
 }
 
+
 #play > div {
   display: flex;
 }
@@ -355,6 +356,20 @@ input[type=number] {
 
 .win[data-value="9"]:before {
   content: url('/smile.ae473213.svg');
+}
+
+@media (max-device-width: 640px) {
+  .field {
+    height: 64px;
+  }
+
+  #start {
+    margin: 100px 50px 5px 50px;
+  }
+
+  #play {
+    margin: 100px 50px 5px 50px;
+  }
 }
 
 
