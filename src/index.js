@@ -2,6 +2,8 @@ import { Board } from './Board';
 import DOM from './DOM';
 import { Timer } from './Timer';
 
+const timer = document.getElementById('timer');
+const stopwatch = new Timer(timer);
 
 const smileys = document.querySelectorAll('.smile');
 smileys.forEach((smile) => smile.style.setProperty('--animation-time', `${(Math.random() * 2) + 2}s`));
@@ -17,12 +19,7 @@ document.getElementById('submit').onclick = () => {
 
   const boardTest = new Board(columns, rows);
   boardTest.drawBombs(numBombs);
-  console.log(boardTest);
-
-  const timer = document.getElementById('timer');
-  const stopwatch = new Timer(timer);
   stopwatch.start();
-
   const boardDraw = new DOM(boardTest, board, numBombs, stopwatch);
   boardDraw.update();
 };
@@ -39,6 +36,9 @@ document.getElementById('reset').onclick = () => {
   document.getElementById('bombNums').value = '10';
   document.getElementById('play').style.borderColor = 'grey';
   document.getElementById('animation').style.display = 'none'; // show play area
+  stopwatch.stop();
+  const timer = document.getElementById('timer');
+  timer.innerText = timer.innerText + '';
   document.body.style.background = '#ffffff';
 
   const boardElements = document.getElementById('board');
