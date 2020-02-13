@@ -58,6 +58,7 @@ body {
 .icon-smile {
   display: flex;
   flex-direction: row;
+  margin-bottom: 4px;
 }
 
 .icon-smile > img {
@@ -368,7 +369,7 @@ input[type=number] {
   }
 
   #play {
-    margin: 100px 50px 5px 50px;
+    margin: 0px 50px 5px 50px;
   }
 
   .arrow-up {
