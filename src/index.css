@@ -158,8 +158,8 @@ input[type=number] {
 }
 
 @keyframes wave {
-  from { transform : translateX(2px); }
-  to   { transform : translateX(-2px ); }
+  from { transform : translateY(2px); }
+  to   { transform : translateY(-2px ); }
 }
 
 @keyframes waveY {
@@ -170,7 +170,7 @@ input[type=number] {
 .button > img, .button-submit > img {
   width: 33px;
   margin-right: -4px;
-  animation-duration: 0.3s;
+  animation-duration: 0.4s;
   animation-delay: -0.7s;
   animation-name: waveY;
   animation-iteration-count: infinite;
@@ -206,8 +206,9 @@ button:hover {
 }
 
 button > div {
-  animation-duration: 0.3s;
+  animation-duration: 0.4s;
   animation-name: wave;
+  padding-right: 2px;
   animation-iteration-count: infinite;
   animation-direction: alternate;
   animation-timing-function: ease-in-out;
