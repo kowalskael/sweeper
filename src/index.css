@@ -181,6 +181,14 @@ input[type=number] {
   animation-timing-function: ease-in-out;
 }
 
+.button > img {
+  animation-delay: -0.7s;
+}
+
+.button-submit > img {
+  animation-delay: -0.5s;
+}
+
 button {
   display: flex;
   flex-direction: row;
@@ -278,7 +286,12 @@ button > div:nth-child(7) {
 
 .description > div > p {
   font-size: 0.95em;
+  letter-spacing: .1em;
   margin: 0px 0px 7px 5px;
+}
+
+.description > div > p:nth-child(2) {
+  color: #ff5719;
 }
 
 .star {
