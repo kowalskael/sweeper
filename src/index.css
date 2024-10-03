@@ -254,7 +254,7 @@ button > div:nth-child(7) {
 #play {
   display: none;
   flex-direction: column;
-  margin: 200px 50px 5px 50px;
+  margin: 70px 50px 5px 50px;
 }
 
 #play > div {
