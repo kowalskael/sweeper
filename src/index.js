@@ -1,6 +1,6 @@
-import { Board } from './Board';
-import DOM from './DOM';
-import { Timer } from './Timer';
+import { Board } from './Board.js';
+import DOM from './DOM.js';
+import { Timer } from './Timer.js';
 
 const timer = document.getElementById('timer');
 const stopwatch = new Timer(timer);
